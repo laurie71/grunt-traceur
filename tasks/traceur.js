@@ -38,6 +38,7 @@ function compileOne (grunt, compile, src, dest, options) {
     src = src[0];
     var content = grunt.file.read(src).toString('utf8');
     options.filename = src;
+    options.out = dest;
     if (options.moduleNames) {
       options.moduleName = [path.dirname(dest), path.sep, path.basename(dest, path.extname(dest))].join('');
     }
